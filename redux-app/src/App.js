@@ -1,11 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import BitCoin from "./components/BitCoin.js"; 
+
 
 function App() {
   return (
     <div className="App">
    <h1> BitCoin API  </h1>
+   <BitCoin /> 
     </div>
   );
 }
