@@ -7,7 +7,7 @@ from "../action/IndexAction.js";
 
 const initialState = {
     data: [], 
-    complied: false, 
+    compiled: false, 
     error: "Something went wrong"
 }
 
@@ -17,13 +17,14 @@ switch(action.type) {
     return {
         ...state, 
         isLoading: true, 
-        error: "Something went wrong"
+        error: ""
     }
     case FETCH_API_DATA_SUCCESS:
     return {
         ...state, 
-        isLoading: action.payload, 
-        error: "Something went wrong"
+        isLoading: false,
+        data: [action.payload],  
+        error: ""
     }; 
     default: 
         return state; 

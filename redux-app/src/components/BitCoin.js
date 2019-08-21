@@ -4,10 +4,13 @@ import { GetData } from "../action/IndexAction.js";
 import BitCoinCard from "./BitCoinCard.js"; 
 
 const BitCoin = (props) => {
+    console.log(props.data)
     return(
         <>
-            <h2> Is this working? </h2> 
-        {props.data.map(coin => <BitCoinCard data={coin} key={coin.name} /> )}
+        <button onClick={props.GetData}> Click Me </button> 
+        <button onClick={()=>console.log(props.data)}> Console.log </button> 
+        { props.data.map(coin => <BitCoinCard coin={coin} key={coin.code} /> )}
+         
         </> 
     );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import BitCoin from "./components/BitCoin.js"; 
+import BitCoin from './components/BitCoin';
 
 
 function App() {
